@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filaia | Your Guide to Understanding AI</title>
+    <meta name="description"
+        content="Explore the diverse fields of Artificial Intelligence, from Machine Learning to NLP and Generative AI.">
+
+    <meta property="og:title" content="filaia | Understanding AI">
+    <meta property="og:description" content="Your guide to understanding the world of AI.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <nav class="nav-links">
+                <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="#fields" data-en="Fields" data-ar="المجالات">Fields</a>
+                <a href="#sources" data-en="Sources" data-ar="المصادر">Sources</a>
+                <a href="#about" data-en="About" data-ar="حول">About</a>
+            </nav>
+            <div class="controls">
+                <input type="text" id="search-input" placeholder="Search fields..."
+                    style="padding:0.5rem; border-radius:8px; border:1px solid var(--bg-card); background:var(--bg-body); color:var(--text-primary);">
+                <button id="lang-toggle" class="btn-icon">ع</button>
+                <button id="theme-toggle" class="btn-icon">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero fade-in">
+        <h1 data-en="Your guide to understanding <span>AI</span>" data-ar="دليلك لفهم <span>الذكاء الاصطناعي</span>">
+            Your guide to understanding <span>AI</span></h1>
+        <p data-en="filaia provides clear, beginner-friendly explanations of Artificial Intelligence fields, complete with real-world applications and cited sources."
+            data-ar="يقدم filaia شروحات واضحة وسهلة للمبتدئين حول مجالات الذكاء الاصطناعي، مع تطبيقات واقعية ومصادر موثوقة.">
+            filaia provides clear, beginner-friendly explanations of Artificial Intelligence fields, complete with
+            real-world applications and cited sources.</p>
+        <a href="#fields" class="btn-primary" data-en="Start Exploring" data-ar="ابدأ الاستكشاف">Start Exploring</a>
+    </section>
+
+    <section class="container fade-in" id="what-is-ai">
+        <h2 class="section-title" data-en="What is <span>AI</span>?" data-ar="ما هو <span>الذكاء الاصطناعي</span>؟">What
+            is <span>AI</span>?</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p data-en="Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. These processes include learning, reasoning, and self-correction."
+                data-ar="الذكاء الاصطناعي (AI) هو محاكاة لعمليات الذكاء البشري بواسطة الآلات، وخاصة أنظمة الكمبيوتر. تشمل هذه العمليات التعلم والاستدلال والتصحيح الذاتي.">
+                Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially
+                computer systems. These processes include learning, reasoning, and self-correction.</p>
+            <br>
+            <h3 data-en="AI vs ML vs DL" data-ar="الفرق بين AI و ML و DL">AI vs ML vs DL</h3>
+            <p data-en="AI is the broad concept. Machine Learning (ML) is a subset of AI that allows systems to learn from data. Deep Learning (DL) is a subset of ML based on artificial neural networks."
+                data-ar="الذكاء الاصطناعي هو المفهوم العام. تعلم الآلة (ML) هو فرع منه يسمح للأنظمة بالتعلم من البيانات. التعلم العميق (DL) هو فرع من تعلم الآلة يعتمد على الشبكات العصبية الاصطناعية.">
+                AI is the broad concept. Machine Learning (ML) is a subset of AI that allows systems to learn from data.
+                Deep Learning (DL) is a subset of ML based on artificial neural networks.</p>
+        </div>
+    </section>
+
+    <section class="container fade-in" id="fields">
+        <h2 class="section-title" data-en="Fields of <span>AI</span>" data-ar="مجالات <span>الذكاء الاصطناعي</span>">
+            Fields of <span>AI</span></h2>
+        <div class="fields-grid">
+            <a href="machine-learning.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Machine Learning" data-ar="تعلم الآلة">Machine Learning</h3>
+                <p data-en="Supervised, unsupervised, and semi-supervised learning."
+                    data-ar="التعلم الخاضع للإشراف وغير الخاضع للإشراف وشبه الخاضع للإشراف.">Supervised, unsupervised,
+                    and semi-supervised learning.</p>
+            </a>
+            <a href="natural-language-processing.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Natural Language Processing" data-ar="معالجة اللغات الطبيعية">Natural Language Processing
+                </h3>
+                <p data-en="NLP and Large Language Models (LLMs)."
+                    data-ar="معالجة اللغات الطبيعية والنماذج اللغوية الكبيرة (LLMs).">NLP and Large Language Models
+                    (LLMs).</p>
+            </a>
+            <a href="deep-learning.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Deep Learning" data-ar="التعلم العميق">Deep Learning</h3>
+                <p data-en="Neural networks and deep architectures." data-ar="الشبكات العصبية والبنى العميقة.">Neural
+                    networks and deep architectures.</p>
+            </a>
+            <a href="computer-vision.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Computer Vision" data-ar="الرؤية الحاسوبية">Computer Vision</h3>
+                <p data-en="Image processing and visual recognition." data-ar="معالجة الصور والتعرف البصري.">Image
+                    processing and visual recognition.</p>
+            </a>
+            <a href="generative-ai.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Generative AI" data-ar="الذكاء التوليدي">Generative AI</h3>
+                <p data-en="Text, image, audio, and video generation." data-ar="توليد النصوص والصور والصوت والفيديو.">
+                    Text, image, audio, and video generation.</p>
+            </a>
+            <a href="reinforcement-learning.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Reinforcement Learning" data-ar="التعلم المعزز">Reinforcement Learning</h3>
+                <p data-en="Learning through rewards and penalties." data-ar="التعلم من خلال المكافآت والعقوبات.">
+                    Learning through rewards and penalties.</p>
+            </a>
+            <a href="robotics.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Robotics" data-ar="الروبوتات">Robotics</h3>
+                <p data-en="Autonomous systems and physical AI." data-ar="الأنظمة المستقلة والذكاء الاصطناعي المادي.">
+                    Autonomous systems and physical AI.</p>
+            </a>
+            <a href="speech-recognition.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Speech Recognition" data-ar="التعرف على الكلام">Speech Recognition</h3>
+                <p data-en="Converting speech to text and vice versa." data-ar="تحويل الكلام إلى نص والعكس.">Converting
+                    speech to text and vice versa.</p>
+            </a>
+            <a href="recommender-systems.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Recommender Systems" data-ar="أنظمة التوصية">Recommender Systems</h3>
+                <p data-en="Personalized content algorithms." data-ar="خوارزميات المحتوى المخصص.">Personalized content
+                    algorithms.</p>
+            </a>
+            <a href="expert-systems.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Expert Systems" data-ar="الأنظمة الخبيرة">Expert Systems</h3>
+                <p data-en="Symbolic AI and rule-based logic."
+                    data-ar="الذكاء الاصطناعي الرمزي والمنطق القائم على القواعد.">Symbolic AI and rule-based logic.</p>
+            </a>
+            <a href="ai-agents.html" class="card" style="text-decoration:none;">
+                <h3 data-en="AI Agents" data-ar="وكلاء الذكاء الاصطناعي">AI Agents</h3>
+                <p data-en="Autonomous task completion systems." data-ar="أنظمة إنجاز المهام المستقلة.">Autonomous task
+                    completion systems.</p>
+            </a>
+            <a href="sector-applications.html" class="card" style="text-decoration:none;">
+                <h3 data-en="Sector Applications" data-ar="تطبيقات القطاعات">Sector Applications</h3>
+                <p data-en="Healthcare, finance, education, industry."
+                    data-ar="الرعاية الصحية والتمويل والتعليم والصناعة.">Healthcare, finance, education, industry.</p>
+            </a>
+            <a href="ai-ethics.html" class="card" style="text-decoration:none;">
+                <h3 data-en="AI Ethics" data-ar="أخلاقيات الذكاء الاصطناعي">AI Ethics</h3>
+                <p data-en="Bias, safety, and regulation." data-ar="التحيز والسلامة والتنظيم.">Bias, safety, and
+                    regulation.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="container fade-in" id="sources">
+        <h2 class="section-title" data-en="Core <span>Sources</span>" data-ar="المصادر <span>الأساسية</span>">Core
+            <span>Sources</span>
+        </h2>
+        <div class="card">
+            <ol>
+                <li data-en="Russell, S., & Norvig, P. (2020). <em>Artificial Intelligence: A Modern Approach</em>. Pearson."
+                    data-ar="راسل، س.، ونورفيج، ب. (2020). <em>الذكاء الاصطناعي: نهج حديث</em>. بيرسون.">Russell, S., &
+                    Norvig, P. (2020). <em>Artificial Intelligence: A Modern Approach</em>. Pearson.</li>
+                <li data-en="Goodfellow, I., et al. (2016). <em>Deep Learning</em>. MIT Press."
+                    data-ar="جودفيلو، إ.، وآخرون. (2016). <em>التعلم العميق</em>. مطبعة معهد ماساتشوستس للتكنولوجيا.">
+                    Goodfellow, I., et al. (2016). <em>Deep Learning</em>. MIT Press.</li>
+                <li data-en="Stanford University Human-Centered AI (HAI). <em>AI Index Report</em>."
+                    data-ar="جامعة ستانفورد - الذكاء الاصطناعي المتمحور حول الإنسان. <em>تقرير مؤشر الذكاء الاصطناعي</em>.">
+                    Stanford University Human-Centered AI (HAI). <em>AI Index Report</em>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <p data-en="&copy; 2023 filaia.com. All rights reserved." data-ar="&copy; 2023 filaia. جميع الحقوق محفوظة.">
+                &copy; 2023 filaia.com. All rights reserved.</p>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:1rem;"
+                data-en="Disclaimer: Content is for educational purposes. Verify all critical implementations."
+                data-ar="إخلاء مسؤولية: المحتوى لأغراض تعليمية. يرجى التحقق من جميع التطبيقات الحرجة.">Disclaimer:
+                Content is for educational purposes. Verify all critical implementations.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

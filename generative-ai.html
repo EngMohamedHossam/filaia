@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI | filaia</title>
+    <meta name="description"
+        content="Explore Generative AI, how artificial intelligence creates text, images, audio, and video.">
+    <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Generative AI", "author": { "@type": "Organization", "name": "filaia" } }
+  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="progress-bar" class="progress-bar"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <nav class="nav-links">
+                <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="index.html#fields" data-en="Fields" data-ar="المجالات">Fields</a>
+                <a href="index.html#sources" data-en="Sources" data-ar="المصادر">Sources</a>
+            </nav>
+            <div class="controls">
+                <button id="lang-toggle" class="btn-icon">ع</button>
+                <button id="theme-toggle" class="btn-icon">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container field-layout">
+        <aside class="toc">
+            <h3 data-en="Table of Contents" data-ar="محتويات الصفحة">Table of Contents</h3>
+            <ul>
+                <li><a href="#introduction" data-en="Introduction" data-ar="مقدمة">Introduction</a></li>
+                <li><a href="#how-it-works" data-en="How it Works" data-ar="كيف يعمل">How it Works</a></li>
+                <li><a href="#concepts" data-en="Core Concepts" data-ar="المفاهيم الأساسية">Core Concepts</a></li>
+                <li><a href="#history" data-en="Brief History" data-ar="نبذة تاريخية">Brief History</a></li>
+                <li><a href="#applications" data-en="Applications" data-ar="التطبيقات">Applications</a></li>
+                <li><a href="#tools" data-en="Tools & Models" data-ar="الأدوات والنماذج">Tools & Models</a></li>
+                <li><a href="#pros-cons" data-en="Advantages & Challenges" data-ar="المزايا والتحديات">Advantages &
+                        Challenges</a></li>
+                <li><a href="#future" data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</a></li>
+                <li><a href="#sources" data-en="Sources" data-ar="المصادر">Sources</a></li>
+            </ul>
+            <button id="copy-link"
+                style="margin-top:1rem; background:var(--deep-blue); color:white; border:none; padding:0.5rem; width:100%; border-radius:8px; cursor:pointer;">🔗
+                Copy Link</button>
+        </aside>
+
+        <article class="field-content">
+            <h1 data-en="Generative AI" data-ar="الذكاء الاصطناعي التوليدي">Generative AI</h1>
+
+            <section id="introduction" class="fade-in">
+                <h2 data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+                <p data-en="Generative AI refers to a class of Artificial Intelligence algorithms designed to generate new content—such as text, images, audio, or video—that resembles human-created data [1]. Unlike discriminative models that classify data, generative models learn the underlying distribution of the data to create something entirely new."
+                    data-ar="يشير الذكاء الاصطناعي التوليدي إلى فئة من خوارزميات الذكاء الاصطناعي المصممة لتوليد محتوى جديد—مثل النصوص أو الصور أو الصوت أو الفيديو—يشبه البيانات التي أنشأها البشر [1]. على عكس النماذج التمييزية التي تصنف البيانات، تتعلم النماذج التوليدية التوزيع الأساسي للبيانات لإنشاء شيء جديد تماماً.">
+                    Generative AI refers to a class of Artificial Intelligence algorithms designed to generate new
+                    content—such as text, images, audio, or video—that resembles human-created data [1]. Unlike
+                    discriminative models that classify data, generative models learn the underlying distribution of the
+                    data to create something entirely new.</p>
+                <p data-en="This field has exploded in popularity recently due to massive leaps in model architecture and computational power, enabling tools that can write essays, paint digital art, and compose music from simple text prompts."
+                    data-ar="شهد هذا المجال انفجاراً في شعبيته مؤخراً بسبب قفزات هائلة في بنية النموذج والقدرة الحاسوبية، مما أتاح أدوات يمكنها كتابة المقالات، ورسم الفن الرقمي، وتأليف الموسيقى من مطالبات نصية بسيطة.">
+                    This field has exploded in popularity recently due to massive leaps in model architecture and
+                    computational power, enabling tools that can write essays, paint digital art, and compose music from
+                    simple text prompts.</p>
+            </section>
+
+            <section id="how-it-works" class="fade-in">
+                <h2 data-en="How it Works" data-ar="كيف يعمل">How it Works</h2>
+                <p data-en="Generative AI models learn patterns and structures from vast training datasets. For example, a text generator (LLM) learns the statistical relationship between words. An image generator like a Diffusion Model learns to denoise a blurry image step-by-step until a clear, new image is formed [2]."
+                    data-ar="تتعلم نماذج الذكاء الاصطناعي التوليدي الأنماط والهياكل من مجموعات بيانات تدريب ضخمة. على سبيل المثال، يتعلم مولد النصوص (LLM) العلاقة الإحصائية بين الكلمات. يتعلم مولد الصور مثل نموذج الانتشار (Diffusion) كيف يزيل الضوضاء من صورة ضبابية خطوة بخطوة حتى تتشكل صورة جديدة واضحة [2].">
+                    Generative AI models learn patterns and structures from vast training datasets. For example, a text
+                    generator (LLM) learns the statistical relationship between words. An image generator like a
+                    Diffusion Model learns to denoise a blurry image step-by-step until a clear, new image is formed
+                    [2].</p>
+            </section>
+
+            <section id="concepts" class="fade-in">
+                <h2 data-en="Core Concepts and Algorithms" data-ar="المفاهيم والخوارزميات الأساسية">Core Concepts and
+                    Algorithms</h2>
+                <ul>
+                    <li data-en="Generative Adversarial Networks (GANs): Two neural networks (generator and discriminator) compete to create highly realistic data [1]."
+                        data-ar="الشبكات التوليدية التنافسية (GANs): شبكتان عصبيتان (مولد وتمييزي) تتنافسان لإنشاء بيانات واقعية للغاية [1].">
+                        Generative Adversarial Networks (GANs): Two neural networks (generator and discriminator)
+                        compete to create highly realistic data [1].</li>
+                    <li data-en="Diffusion Models: Generate data by learning to reverse a gradual noising process (used in DALL-E and Midjourney) [2]."
+                        data-ar="نماذج الانتشار (Diffusion): تولد البيانات عن طريق تعلم عكس عملية إضافة الضوضاء تدريجياً (تُستخدم في DALL-E و Midjourney) [2].">
+                        Diffusion Models: Generate data by learning to reverse a gradual noising process (used in DALL-E
+                        and Midjourney) [2].</li>
+                    <li data-en="Transformers: The architecture behind generative text models like GPT."
+                        data-ar="المحولات (Transformers): البنية التي تقف خلف نماذج توليد النصوص مثل GPT.">Transformers:
+                        The architecture behind generative text models like GPT.</li>
+                </ul>
+            </section>
+
+            <section id="history" class="fade-in">
+                <h2 data-en="Brief History" data-ar="نبذة تاريخية">Brief History</h2>
+                <p data-en="The foundation was laid in 2014 with the invention of GANs by Ian Goodfellow [1]. The public breakthrough occurred around 2022 with the release of tools like ChatGPT (text) and Stable Diffusion (images), which democratized AI generation for the general public."
+                    data-ar="تم وضع الأساس في عام 2014 مع اختراع شبكات GAN بواسطة إيان جودفيلو [1]. حدث الاختراق العام حوالي عام 2022 مع إصدار أدوات مثل ChatGPT (للنصوص) و Stable Diffusion (للصور)، والتي جعلت توليد الذكاء الاصطناعي في متناول الجمهور العام.">
+                    The foundation was laid in 2014 with the invention of GANs by Ian Goodfellow [1]. The public
+                    breakthrough occurred around 2022 with the release of tools like ChatGPT (text) and Stable Diffusion
+                    (images), which democratized AI generation for the general public.</p>
+            </section>
+
+            <section id="applications" class="fade-in">
+                <h2 data-en="Real-world Applications" data-ar="التطبيقات الواقعية">Real-world Applications</h2>
+                <p data-en="Used in marketing to generate ad copy, in software development to auto-generate code, in entertainment to create game assets, and in education as personalized tutoring assistants."
+                    data-ar="يُستخدم في التسويق لتوليد نصوص الإعلانات، وفي تطوير البرمجيات لإنشاء الشفرة البرمجية تلقائياً، وفي الترفيه لإنشاء أصول الألعاب، وفي التعليم كمساعدين للتدريس مخصصين.">
+                    Used in marketing to generate ad copy, in software development to auto-generate code, in
+                    entertainment to create game assets, and in education as personalized tutoring assistants.</p>
+            </section>
+
+            <section id="tools" class="fade-in">
+                <h2 data-en="Popular Tools, Libraries, and Models" data-ar="الأدوات والمكتبات والنماذج الشائعة">Popular
+                    Tools, Libraries, and Models</h2>
+                <p data-en="OpenAI's GPT-4 and DALL-E, Anthropic's Claude, and open-source models like Stable Diffusion and LLaMA."
+                    data-ar="GPT-4 و DALL-E من OpenAI، Claude من Anthropic، ونماذج مفتوحة المصدر مثل Stable Diffusion و LLaMA.">
+                    OpenAI's GPT-4 and DALL-E, Anthropic's Claude, and open-source models like Stable Diffusion and
+                    LLaMA.</p>
+            </section>
+
+            <section id="pros-cons" class="fade-in">
+                <h2 data-en="Advantages, Challenges, and Limitations" data-ar="المزايا والتحديات والقيود">Advantages,
+                    Challenges, and Limitations</h2>
+                <p data-en="Advantages: Drastically accelerates creative processes and content production."
+                    data-ar="المزايا: يسرع بشكل كبير العمليات الإبداعية وإنتاج المحتوى."><strong>Advantages:</strong>
+                    Drastically accelerates creative processes and content production.</p>
+                <p data-en="Challenges: High risk of 'hallucinations' (generating false info), potential copyright infringement issues, and being used to create deepfakes."
+                    data-ar="التحديات: خطر مرتفع لـ 'الهلوسة' (توليد معلومات خاطئة)، مشكلات محتملة لانتهاك حقوق النشر، واستخدامها لإنشاء التزييف العميق (deepfakes).">
+                    <strong>Challenges:</strong> High risk of "hallucinations" (generating false info), potential
+                    copyright infringement issues, and being used to create deepfakes.</p>
+            </section>
+
+            <section id="future" class="fade-in">
+                <h2 data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</h2>
+                <p data-en="The future lies in Multimodal AI (natively processing text, audio, and video together) and personalized local models running on personal devices without internet connectivity."
+                    data-ar="يكمن المستقبل في الذكاء الاصطناعي متعدد الوسائط (معالجة النص والصوت والفيديو معاً بشكل أصلي) والنماذج المحلية المخصصة التي تعمل على الأجهزة الشخصية دون اتصال بالإنترنت.">
+                    The future lies in Multimodal AI (natively processing text, audio, and video together) and
+                    personalized local models running on personal devices without internet connectivity.</p>
+            </section>
+
+            <section id="sources" class="fade-in">
+                <h2 data-en="Sources and References" data-ar="المصادر والمراجع">Sources and References</h2>
+                <ol>
+                    <li data-en="Goodfellow, I., et al. (2014). <em>Generative Adversarial Nets</em>. arXiv:1406.2661. <a href='https://arxiv.org/abs/1406.2661' target='_blank'>Link</a>"
+                        data-ar="جودفيلو، إ.، وآخرون. (2014). <em>الشبكات التوليدية التنافسية</em>. arXiv:1406.2661. <a href='https://arxiv.org/abs/1406.2661' target='_blank'>الرابط</a>">
+                        Goodfellow, I., et al. (2014). <em>Generative Adversarial Nets</em>. arXiv:1406.2661. <a
+                            href="https://arxiv.org/abs/1406.2661" target="_blank">Link</a></li>
+                    <li data-en="Ho, J., et al. (2020). <em>Denoising Diffusion Probabilistic Models</em>. arXiv:2006.11239. <a href='https://arxiv.org/abs/2006.11239' target='_blank'>Link</a>"
+                        data-ar="هو، ج.، وآخرون. (2020). <em>نماذج الانتشار الاحتمالي لإزالة الضوضاء</em>. arXiv:2006.11239. <a href='https://arxiv.org/abs/2006.11239' target='_blank'>الرابط</a>">
+                        Ho, J., et al. (2020). <em>Denoising Diffusion Probabilistic Models</em>. arXiv:2006.11239. <a
+                            href="https://arxiv.org/abs/2006.11239" target="_blank">Link</a></li>
+                </ol>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <p>&copy; 2023 filaia.com. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning | filaia</title>
+    <meta name="description"
+        content="Understand Reinforcement Learning, where AI agents learn by trial and error using rewards and penalties.">
+    <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Reinforcement Learning", "author": { "@type": "Organization", "name": "filaia" } }
+  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="progress-bar" class="progress-bar"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <nav class="nav-links">
+                <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="index.html#fields" data-en="Fields" data-ar="المجالات">Fields</a>
+                <a href="index.html#sources" data-en="Sources" data-ar="المصادر">Sources</a>
+            </nav>
+            <div class="controls">
+                <button id="lang-toggle" class="btn-icon">ع</button>
+                <button id="theme-toggle" class="btn-icon">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container field-layout">
+        <aside class="toc">
+            <h3 data-en="Table of Contents" data-ar="محتويات الصفحة">Table of Contents</h3>
+            <ul>
+                <li><a href="#introduction" data-en="Introduction" data-ar="مقدمة">Introduction</a></li>
+                <li><a href="#how-it-works" data-en="How it Works" data-ar="كيف يعمل">How it Works</a></li>
+                <li><a href="#concepts" data-en="Core Concepts" data-ar="المفاهيم الأساسية">Core Concepts</a></li>
+                <li><a href="#history" data-en="Brief History" data-ar="نبذة تاريخية">Brief History</a></li>
+                <li><a href="#applications" data-en="Applications" data-ar="التطبيقات">Applications</a></li>
+                <li><a href="#tools" data-en="Tools & Models" data-ar="الأدوات والنماذج">Tools & Models</a></li>
+                <li><a href="#pros-cons" data-en="Advantages & Challenges" data-ar="المزايا والتحديات">Advantages &
+                        Challenges</a></li>
+                <li><a href="#future" data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</a></li>
+                <li><a href="#sources" data-en="Sources" data-ar="المصادر">Sources</a></li>
+            </ul>
+            <button id="copy-link"
+                style="margin-top:1rem; background:var(--deep-blue); color:white; border:none; padding:0.5rem; width:100%; border-radius:8px; cursor:pointer;">🔗
+                Copy Link</button>
+        </aside>
+
+        <article class="field-content">
+            <h1 data-en="Reinforcement Learning" data-ar="التعلم المعزز">Reinforcement Learning</h1>
+
+            <section id="introduction" class="fade-in">
+                <h2 data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+                <p data-en="Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by performing actions in an environment to maximize some notion of cumulative reward [1]."
+                    data-ar="التعلم المعزز (RL) هو نوع من تعلم الآلة يتعلم فيه الوكيل (Agent) اتخاذ القرارات من خلال أداء أفعال في بيئة معينة لزيادة المكافأة التراكمية إلى أقصى حد [1].">
+                    Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by
+                    performing actions in an environment to maximize some notion of cumulative reward [1].</p>
+                <p data-en="Unlike supervised learning, RL does not need labeled input/output pairs. It learns from the consequences of its actions, balancing exploration (trying new things) and exploitation (using known rewarding actions)."
+                    data-ar="على عكس التعلم الخاضع للإشراف، لا يحتاج التعلم المعزز إلى بيانات مصنفة مسبقاً. بل يتعلم من عواقب أفعاله، موازناً بين الاستكشاف (تجربة أشياء جديدة) والاستغلال (استخدام الأفعال المعروفة بالمكافآت).">
+                    Unlike supervised learning, RL does not need labeled input/output pairs. It learns from the
+                    consequences of its actions, balancing exploration (trying new things) and exploitation (using known
+                    rewarding actions).</p>
+            </section>
+
+            <section id="how-it-works" class="fade-in">
+                <h2 data-en="How it Works" data-ar="كيف يعمل">How it Works</h2>
+                <p data-en="An RL agent observes the current state of the environment, takes an action, and receives a reward or penalty. Over time, the agent updates its policy (strategy) to favor actions that lead to higher long-term rewards. For example, a robot learning to walk gets a positive reward for moving forward and a penalty for falling over."
+                    data-ar="يلاحظ وكيل التعلم المعزز الحالة الحالية للبيئة، ويتخذ إجراءً، ثم يتلقى مكافأة أو عقوبة. بمرور الوقت، يحدث الوكيل سياسته (استراتيجيته) لصالح الإجراءات التي تؤدي إلى مكافآت طويلة الأجل. على سبيل المثال، يحصل روبوت يتعلم المشي على مكافأة إيجابية للحركة للأمام وعقوبة عند السقوط.">
+                    An RL agent observes the current state of the environment, takes an action, and receives a reward or
+                    penalty. Over time, the agent updates its policy (strategy) to favor actions that lead to higher
+                    long-term rewards. For example, a robot learning to walk gets a positive reward for moving forward
+                    and a penalty for falling over.</p>
+            </section>
+
+            <section id="concepts" class="fade-in">
+                <h2 data-en="Core Concepts and Algorithms" data-ar="المفاهيم والخوارزميات الأساسية">Core Concepts and
+                    Algorithms</h2>
+                <ul>
+                    <li data-en="Q-Learning: A model-free algorithm that finds the best action to take given the current state."
+                        data-ar="التعلم بأسلوب Q (Q-Learning): خوارزمية لا تعتمد على نموذج وتجد أفضل إجراء لاتخاذه بناءً على الحالة الحالية.">
+                        Q-Learning: A model-free algorithm that finds the best action to take given the current state.
+                    </li>
+                    <li data-en="Markov Decision Process (MDP): Mathematical framework for modeling decision-making."
+                        data-ar="عملية ماركوف للقرار (MDP): إطار رياضي لنمذجة عملية اتخاذ القرار.">Markov Decision
+                        Process (MDP): Mathematical framework for modeling decision-making.</li>
+                    <li data-en="Deep Q-Networks (DQN): Combines Q-learning with deep neural networks to handle complex environments."
+                        data-ar="شبكات Q العميقة (DQN): تجمع بين تعلم Q والشبكات العصبية العميقة للتعامل مع البيئات المعقدة.">
+                        Deep Q-Networks (DQN): Combines Q-learning with deep neural networks to handle complex
+                        environments.</li>
+                </ul>
+            </section>
+
+            <section id="history" class="fade-in">
+                <h2 data-en="Brief History" data-ar="نبذة تاريخية">Brief History</h2>
+                <p data-en="RL has its roots in behavioral psychology and optimal control theory. It gained massive attention in 2013 when DeepMind used Deep Q-Networks to master Atari video games, and later in 2016 when AlphaGo defeated the world champion in Go [1]."
+                    data-ar="يعود أساس التعلم المعزز إلى علم النفس السلوكي ونظرية التحكم الأمثل. حظي باهتمام كبير في عام 2013 عندما استخدمت DeepMind شبكات Q العميقة لإتقان ألعاب Atari، ولاحقاً في عام 2016 عندما هزم AlphaGo بطل العالم في لعبة Go [1].">
+                    RL has its roots in behavioral psychology and optimal control theory. It gained massive attention in
+                    2013 when DeepMind used Deep Q-Networks to master Atari video games, and later in 2016 when AlphaGo
+                    defeated the world champion in Go [1].</p>
+            </section>
+
+            <section id="applications" class="fade-in">
+                <h2 data-en="Real-world Applications" data-ar="التطبيقات الواقعية">Real-world Applications</h2>
+                <p data-en="RL is used in robotics for motor control, in finance for algorithmic trading, and heavily in game playing. It is also being applied to optimize energy consumption in data centers."
+                    data-ar="يُستخدم التعلم المعزز في الروبوتات للتحكم في الحركة، وفي التمويل للتداول الخوارزمي، وبشكل كبير في الألعاب. كما يُطبق لتحسين استهلاك الطاقة في مراكز البيانات.">
+                    RL is used in robotics for motor control, in finance for algorithmic trading, and heavily in game
+                    playing. It is also being applied to optimize energy consumption in data centers.</p>
+            </section>
+
+            <section id="tools" class="fade-in">
+                <h2 data-en="Popular Tools, Libraries, and Models" data-ar="الأدوات والمكتبات والنماذج الشائعة">Popular
+                    Tools, Libraries, and Models</h2>
+                <p data-en="OpenAI Gym (now Gymnasium) provides environments for developing and comparing RL algorithms. Ray RLlib and Stable Baselines3 are popular Python libraries. AlphaGo and AlphaZero are landmark models."
+                    data-ar="توفر OpenAI Gym (المعروفة الآن بـ Gymnasium) بيئات لتطوير ومقارنة خوارزميات التعلم المعزز. Ray RLlib و Stable Baselines3 هي مكتبات بايثون شائعة. AlphaGo و AlphaZero هي نماذج تاريخية بارزة.">
+                    OpenAI Gym (now Gymnasium) provides environments for developing and comparing RL algorithms. Ray
+                    RLlib and Stable Baselines3 are popular Python libraries. AlphaGo and AlphaZero are landmark models.
+                </p>
+            </section>
+
+            <section id="pros-cons" class="fade-in">
+                <h2 data-en="Advantages, Challenges, and Limitations" data-ar="المزايا والتحديات والقيود">Advantages,
+                    Challenges, and Limitations</h2>
+                <p data-en="Advantages: Can solve complex, dynamic problems that are hard to model traditionally."
+                    data-ar="المزايا: يمكنه حل المشكلات المعقدة والديناميكية التي يصعب نمذجتها بالطرق التقليدية.">
+                    Advantages: Can solve complex, dynamic problems that are hard to model traditionally.</p>
+                <p data-en="Challenges: Very sample-inefficient (requires millions of trials). Designing the right reward function is difficult and can lead to unexpected, unsafe behaviors."
+                    data-ar="التحديات: غير كفؤ في استخدام العينات (يتطلب ملايين المحاولات). تصميم دالة المكافأة المناسبة أمر صعب وقد يؤدي إلى سلوكيات غير متوقعة وغير آمنة.">
+                    Challenges: Very sample-inefficient (requires millions of trials). Designing the right reward
+                    function is difficult and can lead to unexpected, unsafe behaviors.</p>
+            </section>
+
+            <section id="future" class="fade-in">
+                <h2 data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</h2>
+                <p data-en="Reinforcement Learning from Human Feedback (RLHF) is currently the bridge between RL and Large Language Models, making AI assistants like ChatGPT helpful and safe. Future work focuses on offline RL and safer exploration."
+                    data-ar="التعلم المعزز من الملاحظات البشرية (RLHF) هو حالياً الجسر بين التعلم المعزز والنماذج اللغوية الكبيرة، مما يجعل مساعدي الذكاء الاصطناعي مثل ChatGPT مفيدين وآمنين. يركز العمل المستقبلي على التعلم المعزز دون اتصال (offline RL) والاستكشاف الأكثر أماناً.">
+                    Reinforcement Learning from Human Feedback (RLHF) is currently the bridge between RL and Large
+                    Language Models, making AI assistants like ChatGPT helpful and safe. Future work focuses on offline
+                    RL and safer exploration.</p>
+            </section>
+
+            <section id="sources" class="fade-in">
+                <h2 data-en="Sources and References" data-ar="المصادر والمراجع">Sources and References</h2>
+                <ol>
+                    <li data-en="Sutton, R. S., & Barto, A. G. (2018). <em>Reinforcement Learning: An Introduction</em>. MIT Press. <a href='http://incompleteideas.net/book/the-book.html' target='_blank'>Link</a>"
+                        data-ar="سوتون، ر. س.، وبارتو، أ. ج. (2018). <em>التعلم المعزز: مقدمة</em>. مطبعة معهد ماساتشوستس للتكنولوجيا. <a href='http://incompleteideas.net/book/the-book.html' target='_blank'>الرابط</a>">
+                        Sutton, R. S., & Barto, A. G. (2018). <em>Reinforcement Learning: An Introduction</em>. MIT
+                        Press. <a href="http://incompleteideas.net/book/the-book.html" target="_blank">Link</a></li>
+                </ol>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <p>&copy; 2023 filaia.com. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

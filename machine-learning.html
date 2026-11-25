@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning | filaia</title>
+    <meta name="description"
+        content="Understand Machine Learning, including supervised, unsupervised, and semi-supervised learning methods.">
+    <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article", "headline": "Machine Learning", "author": { "@type": "Organization", "name": "filaia" } }
+  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="progress-bar" class="progress-bar"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <nav class="nav-links">
+                <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="index.html#fields" data-en="Fields" data-ar="المجالات">Fields</a>
+                <a href="index.html#sources" data-en="Sources" data-ar="المصادر">Sources</a>
+            </nav>
+            <div class="controls">
+                <button id="lang-toggle" class="btn-icon">ع</button>
+                <button id="theme-toggle" class="btn-icon">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container field-layout">
+        <aside class="toc">
+            <h3 data-en="Table of Contents" data-ar="محتويات الصفحة">Table of Contents</h3>
+            <ul>
+                <li><a href="#introduction" data-en="Introduction" data-ar="مقدمة">Introduction</a></li>
+                <li><a href="#how-it-works" data-en="How it Works" data-ar="كيف يعمل">How it Works</a></li>
+                <li><a href="#concepts" data-en="Core Concepts" data-ar="المفاهيم الأساسية">Core Concepts</a></li>
+                <li><a href="#history" data-en="Brief History" data-ar="نبذة تاريخية">Brief History</a></li>
+                <li><a href="#applications" data-en="Applications" data-ar="التطبيقات">Applications</a></li>
+                <li><a href="#tools" data-en="Tools & Models" data-ar="الأدوات والنماذج">Tools & Models</a></li>
+                <li><a href="#pros-cons" data-en="Advantages & Challenges" data-ar="المزايا والتحديات">Advantages &
+                        Challenges</a></li>
+                <li><a href="#future" data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</a></li>
+                <li><a href="#glossary" data-en="Key Terms" data-ar="مصطلحات هامة">Key Terms</a></li>
+                <li><a href="#sources" data-en="Sources" data-ar="المصادر">Sources</a></li>
+            </ul>
+            <button id="copy-link"
+                style="margin-top:1rem; background:var(--deep-blue); color:white; border:none; padding:0.5rem; width:100%; border-radius:8px; cursor:pointer;">🔗
+                Copy Link</button>
+        </aside>
+
+        <article class="field-content">
+            <h1 data-en="Machine Learning" data-ar="تعلم الآلة">Machine Learning</h1>
+
+            <section id="introduction" class="fade-in">
+                <h2 data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+                <p data-en="Machine Learning (ML) is a subset of Artificial Intelligence that focuses on the development of algorithms and statistical models that enable computer systems to learn from and make predictions or decisions based on data [1]. Unlike traditional programming where rules are explicitly coded, ML systems identify patterns in data to improve their performance over time."
+                    data-ar="تعلم الآلة (ML) هو فرع من الذكاء الاصطناعي يركز على تطوير الخوارزميات والنماذج الإحصائية التي تمكن أنظمة الكمبيوتر من التعلم من البيانات واتخاذ القرارات بناءً عليها [1]. على عكس البرمجة التقليدية حيث تُكتب القواعد صراحة، تتعرف أنظمة تعلم الآلة على الأنماط في البيانات لتحسين أدائها بمرور الوقت.">
+                    Machine Learning (ML) is a subset of Artificial Intelligence that focuses on the development of
+                    algorithms and statistical models that enable computer systems to learn from and make predictions or
+                    decisions based on data [1]. Unlike traditional programming where rules are explicitly coded, ML
+                    systems identify patterns in data to improve their performance over time.</p>
+                <p data-en="ML is generally categorized into three main paradigms: Supervised Learning (learning from labeled data), Unsupervised Learning (finding hidden structures in unlabeled data), and Semi-supervised Learning (utilizing both labeled and unlabeled data)."
+                    data-ar="يُصنف تعلم الآلة عموماً إلى ثلاثة أنماط رئيسية: التعلم الخاضع للإشراف (التعلم من بيانات مصنفة)، التعلم غير الخاضع للإشراف (إيجاد هياكل خفية في بيانات غير مصنفة)، والتعلم شبه الخاضع للإشراف (استخدام البيانات المصنفة وغير المصنفة معاً).">
+                    ML is generally categorized into three main paradigms: Supervised Learning (learning from labeled
+                    data), Unsupervised Learning (finding hidden structures in unlabeled data), and Semi-supervised
+                    Learning (utilizing both labeled and unlabeled data).</p>
+            </section>
+
+            <section id="how-it-works" class="fade-in">
+                <h2 data-en="How it Works" data-ar="كيف يعمل">How it Works</h2>
+                <p data-en="In a typical ML workflow, a model is trained using a dataset. For example, in Supervised Learning, you might feed the algorithm thousands of images labeled 'cat' or 'dog'. The algorithm adjusts its internal parameters to minimize the error between its predictions and the actual labels. Once trained, the model can be deployed to classify new, unseen images."
+                    data-ar="في سير عمل تعلم الآلة النموذجي، يتم تدريب النموذج باستخدام مجموعة بيانات. على سبيل المثال، في التعلم الخاضع للإشراف، قد تُغذي الخوارزمية بآلاف الصور المسماة 'قطة' أو 'كلب'. تقوم الخوارزمية بتعديل معاملاتها الداخلية لتقليل الخطأ بين تنبؤاتها والتصنيفات الفعلية. بمجرد تدريبها، يمكن نشر النموذج لتصنيف صور جديدة لم يرها من قبل.">
+                    In a typical ML workflow, a model is trained using a dataset. For example, in Supervised Learning,
+                    you might feed the algorithm thousands of images labeled "cat" or "dog". The algorithm adjusts its
+                    internal parameters to minimize the error between its predictions and the actual labels. Once
+                    trained, the model can be deployed to classify new, unseen images.</p>
+            </section>
+
+            <section id="concepts" class="fade-in">
+                <h2 data-en="Core Concepts and Algorithms" data-ar="المفاهيم والخوارزميات الأساسية">Core Concepts and
+                    Algorithms</h2>
+                <ul>
+                    <li data-en="Support Vector Machines (SVM): Used for classification and regression by finding the hyperplane that best divides a dataset into classes."
+                        data-ar="آلات المتجهات الداعمة (SVM): تُستخدم للتصنيف والانحدار من خلال إيجاد المستوي الفاصل الذي يقسم مجموعة البيانات إلى فئات.">
+                        Support Vector Machines (SVM): Used for classification and regression by finding the hyperplane
+                        that best divides a dataset into classes.</li>
+                    <li data-en="K-Means Clustering: An unsupervised algorithm that partitions data into K distinct clusters based on feature similarity."
+                        data-ar="تجميع K-Means: خوارزمية غير خاضعة للإشراف تقسم البيانات إلى K مجموعات distinct بناءً على تشابه الميزات.">
+                        K-Means Clustering: An unsupervised algorithm that partitions data into K distinct clusters
+                        based on feature similarity.</li>
+                    <li data-en="Decision Trees & Random Forests: Flowchart-like structures that use branching methods to illustrate every possible outcome of a decision."
+                        data-ar="أشجار القرار والغابات العشوائية: هياكل تشبه المخططات الانسيابية تستخدم طرق التفرع لتوضيح كل نتيجة محتملة لقرار.">
+                        Decision Trees & Random Forests: Flowchart-like structures that use branching methods to
+                        illustrate every possible outcome of a decision.</li>
+                </ul>
+            </section>
+
+            <section id="history" class="fade-in">
+                <h2 data-en="Brief History" data-ar="نبذة تاريخية">Brief History</h2>
+                <p data-en="The term 'Machine Learning' was coined by Arthur Samuel in 1959. However, the field gained significant traction in the 1990s with the shift from knowledge-driven to data-driven approaches, aided by the rise of the internet and increased computational power [1]."
+                    data-ar="صاغ آرثر صموئيل مصطلح 'تعلم الآلة' في عام 1959. ومع ذلك، اكتسب المجال زخماً كبيراً في التسعينيات مع التحول من النهج القائم على المعرفة إلى النهج القائم على البيانات، بمساعدة صعود الإنترنت وزيادة القوة الحاسوبية [1].">
+                    The term "Machine Learning" was coined by Arthur Samuel in 1959. However, the field gained
+                    significant traction in the 1990s with the shift from knowledge-driven to data-driven approaches,
+                    aided by the rise of the internet and increased computational power [1].</p>
+            </section>
+
+            <section id="applications" class="fade-in">
+                <h2 data-en="Real-world Applications" data-ar="التطبيقات الواقعية">Real-world Applications</h2>
+                <p data-en="ML powers many everyday technologies. Email providers use it to filter spam, banks use it to detect fraudulent transactions in real-time, and streaming services use it to recommend movies based on viewing history."
+                    data-ar="يشغل تعلم الآلة العديد من التقنيات اليومية. يستخدمه مزودو البريد الإلكتروني لتصفية الرسائل المزعجة، وتستخدمه البنوك للكشف عن المعاملات الاحتيالية في الوقت الفعلي، وتستخدمه خدمات البث لترشيح الأفلام بناءً على سجل المشاهدة.">
+                    ML powers many everyday technologies. Email providers use it to filter spam, banks use it to detect
+                    fraudulent transactions in real-time, and streaming services use it to recommend movies based on
+                    viewing history.</p>
+            </section>
+
+            <section id="tools" class="fade-in">
+                <h2 data-en="Popular Tools, Libraries, and Models" data-ar="الأدوات والمكتبات والنماذج الشائعة">Popular
+                    Tools, Libraries, and Models</h2>
+                <p data-en="Python dominates the ML ecosystem with libraries like Scikit-learn for traditional algorithms, and TensorFlow and PyTorch for deep learning tasks."
+                    data-ar="تهيمن لغة بايثون على نظام تعلم الآلة البيئي بمكتبات مثل Scikit-learn للخوارزميات التقليدية، و TensorFlow و PyTorch لمهام التعلم العميق.">
+                    Python dominates the ML ecosystem with libraries like <strong>Scikit-learn</strong> for traditional
+                    algorithms, and <strong>TensorFlow</strong> and <strong>PyTorch</strong> for deep learning tasks.
+                </p>
+            </section>
+
+            <section id="pros-cons" class="fade-in">
+                <h2 data-en="Advantages, Challenges, and Limitations" data-ar="المزايا والتحديات والقيود">Advantages,
+                    Challenges, and Limitations</h2>
+                <p data-en="Advantages: Automation of repetitive tasks, ability to handle high-dimensional data."
+                    data-ar="المزايا: أتمتة المهام المتكررة، والقدرة على التعامل مع البيانات عالية الأبعاد.">
+                    <strong>Advantages:</strong> Automation of repetitive tasks, ability to handle high-dimensional
+                    data.</p>
+                <p data-en="Challenges: Requires large amounts of clean data. Models can act as 'black boxes,' making interpretability difficult (the interpretability problem)."
+                    data-ar="التحديات: يتطلب كميات كبيرة من البيانات النظيفة. يمكن للنماذج أن تعمل كـ 'صناديق سوداء'، مما يجعل تفسيرها أمراً صعباً (مشكلة القابلية للتفسير).">
+                    <strong>Challenges:</strong> Requires large amounts of clean data. Models can act as "black boxes,"
+                    making interpretability difficult (the interpretability problem).</p>
+            </section>
+
+            <section id="future" class="fade-in">
+                <h2 data-en="Future Outlook" data-ar="النظرة المستقبلية">Future Outlook</h2>
+                <p data-en="The future of ML points toward AutoML (automating the design of ML pipelines), Federated Learning (training on decentralized devices), and more energy-efficient algorithms to reduce the carbon footprint of large-scale model training."
+                    data-ar="يشير مستقبل تعلم الآلة نحو الأتمتة (أتمتة تصميم مسارات تعلم الآلة)، والتعلم الموحد (التدريب على أجهزة لامركزية)، وخوارزميات أكثر كفاءة في استهلاك الطاقة لتقليل البصمة الكربونية لتدريب النماذج واسعة النطاق.">
+                    The future of ML points toward AutoML (automating the design of ML pipelines), Federated Learning
+                    (training on decentralized devices), and more energy-efficient algorithms to reduce the carbon
+                    footprint of large-scale model training.</p>
+            </section>
+
+            <section id="glossary" class="fade-in">
+                <h2 data-en="Key Terms (Bilingual)" data-ar="مصطلحات هامة (ثنائية اللغة)">Key Terms (Bilingual)</h2>
+                <ul>
+                    <li data-en="Algorithm / الخوارزمية" data-ar="Algorithm / الخوارزمية">Algorithm / الخوارزمية</li>
+                    <li data-en="Dataset / مجموعة البيانات" data-ar="Dataset / مجموعة البيانات">Dataset / مجموعة
+                        البيانات</li>
+                    <li data-en="Training / التدريب" data-ar="Training / التدريب">Training / التدريب</li>
+                </ul>
+            </section>
+
+            <section id="sources" class="fade-in">
+                <h2 data-en="Sources and References" data-ar="المصادر والمراجع">Sources and References</h2>
+                <ol>
+                    <li data-en="Russell, S., & Norvig, P. (2020). <em>Artificial Intelligence: A Modern Approach</em> (4th ed.). Pearson. <a href='https://www.pearson.com/us/higher-education/program/Russell-Artificial-Intelligence-A-Modern-Approach-4th-Edition/PGM3337280.html' target='_blank'>Link</a>"
+                        data-ar="راسل، س.، ونورفيج، ب. (2020). <em>الذكاء الاصطناعي: نهج حديث</em> (الطبعة الرابعة). بيرسون. <a href='https://www.pearson.com/us/higher-education/program/Russell-Artificial-Intelligence-A-Modern-Approach-4th-Edition/PGM3337280.html' target='_blank'>الرابط</a>">
+                        Russell, S., & Norvig, P. (2020). <em>Artificial Intelligence: A Modern Approach</em> (4th ed.).
+                        Pearson. <a
+                            href="https://www.pearson.com/us/higher-education/program/Russell-Artificial-Intelligence-A-Modern-Approach-4th-Edition/PGM3337280.html"
+                            target="_blank">Link</a></li>
+                </ol>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="logo"><span class="fil">fil</span><span class="ai">ai</span><span
+                    class="a">a</span></a>
+            <p>&copy; 2023 filaia.com. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
